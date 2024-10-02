@@ -21,6 +21,8 @@
 <li>It needs to have 100% test coverage, pass pylint, and you need to do your best to not repeat any lines of code.</li>
 <li>You should use type hints for input parameter types and return types.</li>
 <li>Implement a pytest fixture to the tests.</li>
+<li>Implemented a new command to pytest to generate N number of records, so that you can run the following command: pytest --num_records=100 to generate 100 records.</li>
+<li>Added a main.py file to serve as an entry point to your program and provide command line utilities.</li>
 </ol>
 
 ---
@@ -31,6 +33,7 @@
 <li><b>pytest:</b> The pytest framework makes it easy to write small, readable tests, and can scale to support complex functional testing for applications and libraries.</li>
 <li><b>pytest-pylint:</b> Pylint analyses your code without actually running it. It checks for errors, enforces a coding standard, looks for code smells, and can make suggestions about how the code could be refactored.</li>
 <li><b>pytest-cov: </b>Coverage.py is a tool for measuring code coverage of Python programs. It monitors your program, noting which parts of the code have been executed, then analyzes the source to identify code that could have been executed but was not.</li>
+<li><b>Faker: </b>Faker is a Python package that generates fake data for you.</li>
 </ol>
 
 ---
@@ -43,6 +46,24 @@
 <li><b>Multiplication:</b> Multiplies two numbers</li>
 <li><b>Division:</b> Divides two numbers and also catches the divide by zero exception</li>
 <li><b>History:</b> Stores and clears history of the calculator
+</ol>
+
+---
+<b>Note: </b>
+<ol>
+<li>To run tests with fake data generated using Faker, use</li>
+
+`pytest --num_records=100 --cov --pylint`
+
+<li>To use the command line utility use one of the following command:</li>
+
+`python main.py <num1> <num2> <add/subtract/multiply/divide>`
+
+For example,
+
+`python main.py 2 3 add`
+
+
 </ol>
 
 ---
